@@ -8,10 +8,10 @@ import { formatCurrency } from "@/lib/format";
 export default function HomePage() {
   return (
     <div className="bg-[#f6faf9]">
-      <section className="relative overflow-hidden border-b border-slate-200 bg-[#eef8f7] pb-12">
+      <section className="relative overflow-hidden border-b border-slate-200 bg-[#eef8f7] pb-10">
         <div className="absolute inset-x-0 top-0 h-72 bg-[linear-gradient(135deg,#0f766e_0%,#0f172a_58%,#1e3a8a_100%)]" />
         <div className="absolute inset-x-0 top-0 h-72 opacity-40 [background-image:linear-gradient(45deg,transparent_0_35%,rgba(255,255,255,.2)_35%_36%,transparent_36%_65%,rgba(255,255,255,.16)_65%_66%,transparent_66%)]" />
-        <div className="relative mx-auto max-w-[1340px] px-4 pt-6 sm:px-6 lg:pt-8">
+        <div className="relative mx-auto max-w-[1340px] px-4 py-6 sm:px-6 lg:py-8">
           <div className="relative overflow-hidden rounded-[28px] bg-slate-950 text-white shadow-2xl ring-1 ring-white/20">
             <img
               src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1800&q=80"
@@ -19,7 +19,7 @@ export default function HomePage() {
               className="absolute inset-0 h-full w-full object-cover opacity-30"
             />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(45,212,191,.35),transparent_24%),linear-gradient(90deg,rgba(15,23,42,.96),rgba(15,23,42,.62)_48%,rgba(15,118,110,.72))]" />
-            <div className="relative grid min-h-[430px] gap-8 p-6 sm:p-8 md:p-10 lg:grid-cols-[1fr_420px] lg:items-center">
+            <div className="relative grid gap-8 p-6 sm:p-8 md:p-10 lg:min-h-[380px] lg:grid-cols-[1fr_400px] lg:items-center">
               <div>
                 <p className="w-fit rounded-full bg-white/12 px-4 py-2 text-sm font-black uppercase tracking-wide text-cyan-100 ring-1 ring-white/20">
                   An Tâm Bus · tuyến xe liên tỉnh
@@ -37,7 +37,7 @@ export default function HomePage() {
                     ["24/7", "hỗ trợ vé"],
                   ].map(([value, label]) => (
                     <div key={label} className="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
-                      <p className="text-3xl font-black">{value}</p>
+                      <p className="text-2xl font-black md:text-3xl">{value}</p>
                       <p className="text-sm font-bold text-cyan-100">{label}</p>
                     </div>
                   ))}
@@ -62,7 +62,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative z-10 mx-auto -mt-14 max-w-[1280px] lg:-mt-16">
+          <div className="relative z-10 mx-auto mt-5 max-w-[1280px]">
             <SearchForm home />
           </div>
         </div>
