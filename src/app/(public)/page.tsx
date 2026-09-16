@@ -8,10 +8,10 @@ import { formatCurrency } from "@/lib/format";
 export default function HomePage() {
   return (
     <div className="bg-[#f6faf9]">
-      <section className="relative overflow-hidden border-b border-slate-200 bg-[#eef8f7] pb-16">
+      <section className="relative overflow-hidden border-b border-slate-200 bg-[#eef8f7] pb-12">
         <div className="absolute inset-x-0 top-0 h-72 bg-[linear-gradient(135deg,#0f766e_0%,#0f172a_58%,#1e3a8a_100%)]" />
         <div className="absolute inset-x-0 top-0 h-72 opacity-40 [background-image:linear-gradient(45deg,transparent_0_35%,rgba(255,255,255,.2)_35%_36%,transparent_36%_65%,rgba(255,255,255,.16)_65%_66%,transparent_66%)]" />
-        <div className="relative mx-auto max-w-[1450px] px-5 pt-9">
+        <div className="relative mx-auto max-w-[1340px] px-4 pt-6 sm:px-6 lg:pt-8">
           <div className="relative overflow-hidden rounded-[28px] bg-slate-950 text-white shadow-2xl ring-1 ring-white/20">
             <img
               src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1800&q=80"
@@ -19,12 +19,12 @@ export default function HomePage() {
               className="absolute inset-0 h-full w-full object-cover opacity-30"
             />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(45,212,191,.35),transparent_24%),linear-gradient(90deg,rgba(15,23,42,.96),rgba(15,23,42,.62)_48%,rgba(15,118,110,.72))]" />
-            <div className="relative grid min-h-[360px] gap-8 p-8 md:p-10 lg:grid-cols-[1fr_430px] lg:items-center">
+            <div className="relative grid min-h-[430px] gap-8 p-6 sm:p-8 md:p-10 lg:grid-cols-[1fr_420px] lg:items-center">
               <div>
                 <p className="w-fit rounded-full bg-white/12 px-4 py-2 text-sm font-black uppercase tracking-wide text-cyan-100 ring-1 ring-white/20">
                   An Tâm Bus · tuyến xe liên tỉnh
                 </p>
-                <h1 className="mt-6 max-w-3xl text-4xl font-black leading-tight md:text-6xl">
+                <h1 className="mt-5 max-w-3xl text-4xl font-black leading-[1.08] md:text-5xl lg:text-[56px]">
                   Đi đâu cũng gọn, đặt vé trong vài chạm.
                 </h1>
                 <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-200">
@@ -62,7 +62,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative z-10 mx-auto -mt-10 max-w-[1360px]">
+          <div className="relative z-10 mx-auto -mt-14 max-w-[1280px] lg:-mt-16">
             <SearchForm home />
           </div>
         </div>

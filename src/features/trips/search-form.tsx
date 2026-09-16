@@ -11,10 +11,10 @@ export function SearchForm({ compact = false, home = false }: { compact?: boolea
 
   if (home) {
     return (
-      <form action="/tim-chuyen" className="rounded-[30px] bg-white p-4 shadow-2xl shadow-slate-300/45 ring-1 ring-slate-200">
-        <div className="rounded-[24px] border-2 border-teal-200 bg-white p-5 md:p-7">
+      <form action="/tim-chuyen" className="rounded-[28px] bg-white p-3 shadow-2xl shadow-slate-300/45 ring-1 ring-slate-200">
+        <div className="rounded-[22px] border-2 border-teal-200 bg-white p-4 md:p-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <div className="flex flex-wrap items-center gap-6 text-lg font-black">
+            <div className="flex flex-wrap items-center gap-5 text-base font-black md:text-lg">
               <label className="inline-flex cursor-pointer items-center gap-3 text-teal-700">
                 <input type="radio" name="tripType" defaultChecked className="h-5 w-5 accent-teal-600" />
                 Một chiều
@@ -33,9 +33,9 @@ export function SearchForm({ compact = false, home = false }: { compact?: boolea
             </a>
           </div>
 
-          <div className="relative mt-7 grid gap-4 lg:grid-cols-[1.12fr_1.12fr_.9fr_.62fr]">
+          <div className="relative mt-6 grid gap-4 lg:grid-cols-[1.12fr_1.12fr_.86fr_.58fr]">
             <HomeField label="Điểm đi">
-              <select name="from" value={from} onChange={(event) => setFrom(event.target.value)} className="focus-ring h-20 w-full appearance-none rounded-2xl border border-slate-200 bg-slate-50 px-5 text-xl font-black text-slate-950">
+              <select name="from" value={from} onChange={(event) => setFrom(event.target.value)} className="focus-ring h-16 w-full appearance-none rounded-2xl border border-slate-200 bg-slate-50 px-5 text-base font-black text-slate-950 md:text-lg">
                 {locations.map((location) => (
                   <option key={location}>{location}</option>
                 ))}
@@ -49,13 +49,13 @@ export function SearchForm({ compact = false, home = false }: { compact?: boolea
                 setFrom(to);
                 setTo(from);
               }}
-              className="focus-ring absolute left-[27.5%] top-[54px] z-10 hidden h-12 w-12 -translate-x-1/2 place-items-center rounded-full border border-slate-200 bg-white text-teal-700 shadow-lg lg:grid"
+              className="focus-ring absolute left-[27.5%] top-[48px] z-10 hidden h-11 w-11 -translate-x-1/2 place-items-center rounded-full border border-slate-200 bg-white text-teal-700 shadow-lg lg:grid"
             >
-              ↔
+              <ArrowLeftRight size={18} />
             </button>
 
             <HomeField label="Điểm đến">
-              <select name="to" value={to} onChange={(event) => setTo(event.target.value)} className="focus-ring h-20 w-full appearance-none rounded-2xl border border-slate-200 bg-slate-50 px-5 text-xl font-black text-slate-950">
+              <select name="to" value={to} onChange={(event) => setTo(event.target.value)} className="focus-ring h-16 w-full appearance-none rounded-2xl border border-slate-200 bg-slate-50 px-5 text-base font-black text-slate-950 md:text-lg">
                 {locations.map((location) => (
                   <option key={location}>{location}</option>
                 ))}
@@ -63,14 +63,14 @@ export function SearchForm({ compact = false, home = false }: { compact?: boolea
             </HomeField>
 
             <HomeField label="Ngày đi">
-              <span className="grid h-20 rounded-2xl border border-slate-200 bg-slate-50 px-5 py-3">
-                <input name="date" type="date" defaultValue="2026-09-13" className="focus-ring bg-transparent text-xl font-black text-slate-950" />
+              <span className="grid h-16 rounded-2xl border border-slate-200 bg-slate-50 px-5 py-2">
+                <input name="date" type="date" defaultValue="2026-09-13" className="focus-ring bg-transparent text-base font-black text-slate-950 md:text-lg" />
                 <span className="text-sm font-bold text-slate-500">Chủ nhật</span>
               </span>
             </HomeField>
 
             <HomeField label="Số vé">
-              <select name="tickets" defaultValue="1" className="focus-ring h-20 w-full appearance-none rounded-2xl border border-slate-200 bg-slate-50 px-5 text-xl font-black text-slate-950">
+              <select name="tickets" defaultValue="1" className="focus-ring h-16 w-full appearance-none rounded-2xl border border-slate-200 bg-slate-50 px-5 text-base font-black text-slate-950 md:text-lg">
                 {[1, 2, 3, 4, 5, 6].map((count) => (
                   <option key={count}>{count}</option>
                 ))}
@@ -78,14 +78,14 @@ export function SearchForm({ compact = false, home = false }: { compact?: boolea
             </HomeField>
           </div>
 
-          <div className="mt-7 grid gap-5 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div className="mt-6 grid gap-4 lg:grid-cols-[1fr_280px] lg:items-stretch">
             <div className="rounded-2xl bg-slate-50 p-4">
               <p className="text-base font-black text-slate-800">Tìm kiếm gần đây</p>
-              <button type="button" className="mt-3 rounded-2xl border border-slate-200 bg-white px-5 py-3 text-left text-base font-bold text-slate-700 shadow-sm">
+              <button type="button" className="mt-3 w-full max-w-xl rounded-2xl border border-slate-200 bg-white px-5 py-3 text-left text-sm font-bold text-slate-700 shadow-sm md:text-base">
                 TP. Hồ Chí Minh - Vũng Liêm - Vĩnh Long · 13/09/2026
               </button>
             </div>
-            <Button className="h-16 min-w-72 rounded-2xl bg-gradient-to-r from-teal-600 to-sky-600 text-lg hover:from-teal-700 hover:to-sky-700">
+            <Button className="h-16 w-full self-end rounded-2xl bg-gradient-to-r from-teal-600 to-sky-600 text-lg hover:from-teal-700 hover:to-sky-700 lg:h-full lg:min-h-24">
               <Search size={22} /> Tìm chuyến
             </Button>
           </div>
@@ -155,7 +155,7 @@ export function SearchForm({ compact = false, home = false }: { compact?: boolea
 function HomeField({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="grid gap-2">
-      <span className="px-2 text-base font-black text-slate-700">{label}</span>
+      <span className="px-2 text-sm font-black text-slate-700 md:text-base">{label}</span>
       {children}
     </label>
   );
